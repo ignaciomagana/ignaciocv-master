@@ -1,0 +1,190 @@
+\documentclass[letterpaper,10pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+%\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadinged}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4}\\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingedd}[6]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4}\\ 
+		& \textit{#5}\\
+		& \textit{#6}\\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Ignacio Maga\~na Hernandez}
+& Address: Department of Physics\\
+Email: maganah2@uwm.edu 
+& University of Wisconsin-Milwaukee\\
+Tel: 1 (414) 229-4960
+& 3135 N Maryland Ave\\
+Web: http://ignaciomagana.github.io
+& Milwaukee, WI 53211
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{Graduate Studies, Physics}{September 2017 - Present}
+\item
+	\ressubheadinged{University of California, Santa Barbara}{Santa Barbara, CA}{B.S., Physics (3.90 GPA, Highest Honors)}{September 2014 - June 2017}
+\item
+	\ressubheadinged{Foothill College}{Los Altos Hills, CA}{Transfer Student, Physics}{September 2012 - June 2014}
+\item
+	\ressubheadinged{Los Altos High}{Los Altos, CA}{High School Student}{August 2008 - June 2012}
+
+\end{itemize}
+
+\resheading{Research Interests}
+\begin{itemize}
+	\item Gravitational wave cosmology: measurements of the Hubble constant and other cosmological parameters using  gravitational wave standard sirens such as merging binary black holes and neutron stars. Short gamma ray bursts and their connection to binary neutron star sources as their progenitors. Gravitational wave lensing: its detection, data analysis and cosmological applications.
+
+\end{itemize}
+
+\resheading{Awards \& Fellowships}
+\begin{itemize}
+    \item UWM Advanced Opportunity Program Fellowship (2019 - 2022)
+	\item NSF Graduate Research Fellowship (2017 - Present)
+	\item UCSB Physics Department Highest Academic Honors (June 2017)
+	\item Blanco Fellowship (Summer 2015, LIGO SURF fellowship award)
+	\item UCSB Dean's list (Fall 2014 - Spring 2017)
+	\item NSF Science, Math and Engineering (S-STEM) Scholarship  (Fall 2013 - Spring 2014)
+\end{itemize}
+
+\resheading{Research Positions}
+\begin{itemize}
+\item
+	\ressubheading{LIGO, University of Wisconsin-Milwaukee}{Milwaukee}{Research Assistant}{Research Assistant, September, 2017 - Present}
+	\begin{itemize}
+		\resitem{My main focus is on gravitational wave cosmology with standard sirens. I am most interested in using binary black hole events for which no electromagnetic counterpart is expected to infer cosmological parameters statistically with large galaxy surveys.}
+		\resitem{I am also the lead developer of the \texttt{gwcosmo} package (to be released soon publicly) which provides analysis tools in Python to analyze gravitational wave data and infer cosmology from it. }
+		\resitem{Additional work on strongly lensed gravitational wave events: detection, model selection as well as hierarchical analysis for a population of these events.}
+	\end{itemize}
+\item
+	\ressubheading{LIGO, The Chinese University of Hong Kong}{Hong Kong}{Research Assistant}{Research Assistant, March, 2016 - Present}
+	\begin{itemize}
+		\resitem{Continued collaboration with Prof. Tjonnie Li for the CUHK LIGO group while at UWM. Current work focuses mainly in strongly lensed gravitational wave data analysis.}
+		\resitem{We are  also developing and testing a framework for the detection of an ensemble of sub-threshold binary neutron star signals by coherently stacking them. We can infer their simulated population properties much more effectively by combining all these events.}
+	\end{itemize}
+\item
+	\ressubheading{UCSB Department of Physics}{Santa Barbara, CA}{Undergraduate Research Assistant}{Undergraduate Research Assistant, November 2016 - May 2017}
+	\begin{itemize}
+		\resitem{Worked with Prof. Joseph Incandela for the UCSB High Energy Experimental Physics group.}
+		\resitem{Work involved the data analysis and simulation of signal and noise backgrounds for the Light Dark Matter Experiment (LDMX) in collaboration with SLAC at Stanford University.}
+	\end{itemize}
+\item
+	\ressubheading{LIGO Lab, Caltech}{Pasadena, CA}{Summer Undergraduate Research Fellow}{Summer Undergraduate Research Fellow, June 13, 2015 - September 7, 2015}
+	\begin{itemize}
+		\resitem{Developed and tested a set of feedforward IIR Wiener filters in order to filter out seismic noise out the LIGO 40m interferometer mode cleaner and arm cavities.} 
+		\resitem{The filters reduced seismic noise couplings for the mode cleaner by a factor of 7 at ~1.2 Hz and 10 at 3Hz. }
+		\resitem{Measured the noise floor of seismic sensors such as accelerometers using standard methods.}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Short Author Papers}
+\begin{itemize}
+	\item A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart, M. Fishbach, R. Gray, \textbf{I. Maga\~na Hernandez}, H. Qi, A. Sur, et al. arXiv:1807.05667
+    \item Joint Bayesian Parameter Estimation and Model Selection on Strongly Lensed Gravitational-wave Events, Magaña Hernandez, I., et al. In prep..
+	\item Cosmological inference using gravitational wave standard sirens: A mock data challenge, R. Gray, \textbf{I. Maga\~na Hernandez}, et al. In prep.
+\end{itemize}
+
+\resheading{LIGO-Virgo publications to which I contributed:}
+\begin{itemize}
+	\item A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo, LIGO-Virgo Collaboration. In prep.
+\end{itemize}
+
+\resheading{Non-refereed Papers}
+\begin{itemize}
+	\item Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer, \textbf{I. Maga\~na Hernandez}, E. Quintero, K. Arai, R. Adhikari. LIGO-DCC T1500195
+\end{itemize}
+
+\resheading{Conferences/Presentations}
+\begin{itemize}
+    \item April 2019 APS Meeting | Student Presenter, Denver, April 2019. Talk:  A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo.
+    \item CUHK Seminar, The Chinese University of Hong Kong, February 2019, Invited talk, "A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo"
+    \item 2019 YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology | Student Presenter, Yukawa Institute of Theoretical Physics, Kyoto, Feb 2019. Talk: A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart.
+    \item Cosmology C-LAB seminar, Nagoya University, February 2019, Contributed talk, "A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo"
+    \item Gravitational Waves Physics and Astronomy Workshop (GWPAW 2018) | Student Presenter, University of Maryland, Maryland, December 2018. Poster: Cosmological inference using gravitational wave standard sirens: A mock data challenge.
+    \item Midwest Relativity Meeting (2018) | Student Presenter, University of Wisconsin-Milwaukee, Milwaukee, October 2018. Talk: Cosmological inference using gravitational wave standard sirens: A mock data challenge.
+    \item Les Houches Summer School: Gravitational-Wave Astronomy | Accepted Participant, Ecole de Physics des Houches, Les Houches, France July 2018.
+	\item Summer School on Gravitational-Wave Astronomy | Invited Participant, ICTS-TIFR, Bangalore, August 2016. Topics: Post-Newtonian formalism, black hole perturbation theory and GW data analysis.
+	\item 19th Annual Physical Society of Hong Kong| Student Presenter, Hong Kong University, Hong Kong, June 2016. Talk: Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer.
+	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS) | Student attendee, Washington D.C., November 2015.
+\end{itemize}
+
+\resheading{Societies/Affiliations}
+\begin{itemize}
+	\item LIGO Scientific Collaboration (Full Member) CBC Subgroup.
+	\item American Physical Society | Undergraduate Member
+	\item Physical Society of Hong Kong | Student Member
+	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS) | Student Member
+	\item National Society of Hispanic Physicists | Student Member
+	\item Society of Physics Students, UCSB | Member
+\end{itemize}
+
+\resheading{Skills}
+\begin{itemize}
+\item \textbf{Programming skills:}
+	\begin{itemize}
+	\item Proficiency with: Python (NumPy, SciPy, Pandas, Scikit-learn) C, Mathematica, LaTeX.
+	\item Familiar with: Stan, C++, MATLAB/Simulink.
+	\item LIGO related software: LALSuite, PyCBC, ligo.skymap.
+	\end{itemize}
+\item \textbf{Data Analysis:}
+	\begin{itemize}
+		\item Bayesian inference, parameter estimation, Monte Carlo methods.
+		\item Digital signal processing, machine learning and some numerical relativity experience.
+	\end{itemize}
+\item \textbf{Languages:} Spanish (fluent). Japanese (beginner).
+\end{itemize}
+
+\resheading{Community Service}
+\begin{itemize}
+\item
+	\ressubheading{Foothill College Physics Department}{Los Altos Hills, CA}{Special Projects in Physics Member}{Special Projects in Physics Member, September 24. 2013 - June 6, 2014}
+	\begin{itemize}
+		\resitem{Worked in three separate projects: The construction and demonstration of Galileo’s incline experiment, Galileo’s water clocks, as well as the assembly of a 15 feet long Pendulum Snake that made it into the 2014 Foothill College Physics Show.}
+	\end{itemize}
+\item
+	\ressubheading{Foothill College Physics Show}{Los Altos Hills, CA}{Presenter}{Presenter, January 4, 2014 - February 4, 2014 }
+	\begin{itemize}
+		\resitem{Prepared, performed and presented a set of physics demonstrations for an audience of 25,000 people over the span of two weekends, two shows per day.}
+	\end{itemize}
+\end{itemize}
+
+\end{document}
