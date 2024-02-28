@@ -3,6 +3,18 @@
 %-----------------------------------------------------------
 \usepackage[empty]{fullpage}
 \usepackage{color}
+\usepackage{comment}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+    
 \definecolor{mygrey}{gray}{0.80}
 \raggedbottom
 \raggedright
@@ -13,7 +25,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-0.5in}
-%\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.0in}
 
 %-----------------------------------------------------------
 %Custom commands
@@ -30,13 +42,41 @@
 		\textit{#3} & \textit{#4}\\
 \end{tabular*}\vspace{-6pt}}
 
-\newcommand{\ressubheadingedd}[6]{
-\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4}\\ 
-		& \textit{#5}\\
-		& \textit{#6}\\
-\end{tabular*}\vspace{-6pt}}
+\newcommand{\resheadingAuthor}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{7pt}}
+
+\newcommand{\presentation}[3]{
+\begin{tabularx}
+		\textbf{#1} & \hfill #2 \\
+		\textit{#3}\\
+\end{tabularx}\vspace{-3pt}}
+
+\newcommand{\publicationArxiv}[5]{
+\begin{tabularx}
+		\emph{#1} \\
+		#2 \\
+		(\href{#3}{#4}, \underline{#5 citations})
+\end{tabularx}\vspace{-3pt}}
+
+\newcommand{\publicationArxivNew}[4]{
+\begin{tabularx}
+		\emph{#1} \\
+		#2 \\
+		(\href{#3}{#4})
+\end{tabularx}\vspace{-3pt}}
+
+\newcommand{\publicationJournal}[6]{
+\begin{tabularx}
+		\emph{#1} \\
+		#2 \\
+		#3 (\href{#4}{#5}, \underline{#6 citations})
+\end{tabularx}\vspace{-3pt}}
+
+\newcommand{\publicationLVK}[7]{
+\begin{tabularx}
+		\emph{#1} \\
+		#2 \\
+		#3 (\href{#4}{#5}, \underline{#6 citations}) \textbf{#7}
+\end{tabularx}\vspace{-3pt}}
 
 %-----------------------------------------------------------
 
@@ -44,147 +84,266 @@
 \begin{document}
 
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-\textbf{\large Ignacio Maga\~na Hernandez}
+\textbf{\Large Ignacio Maga\~na Hernandez}
 & Address: Department of Physics\\
-Email: maganah2@uwm.edu 
-& University of Wisconsin-Milwaukee\\
-Tel: 1 (414) 229-4960
-& 3135 N Maryland Ave\\
+Email: imhernan@andrew.cmu.edu 
+& Carnegie Mellon University\\
 Web: http://ignaciomagana.github.io
-& Milwaukee, WI 53211
+& 5000 Forbes Ave\\
+Citizenship: USA 
+& Pittsburgh, PA 15213
 \end{tabular*}
 \\
 
 \vspace{0.1in}
 
-\resheading{Education}
-\begin{itemize}
-\item
-	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{Graduate Studies, Physics}{September 2017 - Present}
-\item
-	\ressubheadinged{University of California, Santa Barbara}{Santa Barbara, CA}{B.S., Physics (3.90 GPA, Highest Honors)}{September 2014 - June 2017}
-\item
-	\ressubheadinged{Foothill College}{Los Altos Hills, CA}{Transfer Student, Physics}{September 2012 - June 2014}
-\item
-	\ressubheadinged{Los Altos High}{Los Altos, CA}{High School Student}{August 2008 - June 2012}
-
-\end{itemize}
-
 \resheading{Research Interests}
 \begin{itemize}
-	\item Gravitational wave cosmology: measurements of the Hubble constant and other cosmological parameters using  gravitational wave standard sirens such as merging binary black holes and neutron stars. Short gamma ray bursts and their connection to binary neutron star sources as their progenitors. Gravitational wave lensing: its detection, data analysis and cosmological applications.
-
+	\item[] \textbf{Gravitational wave cosmology:} measurements of the Hubble constant and other cosmological parameters using  gravitational wave standard sirens such as merging binary black holes and neutron stars. 
+	\item[] \textbf{Gravitational wave lensing:} its detection, data analysis and cosmological applications. 
+	\item[] \textbf{Modified gravitational wave propagation:} testing deviations of $\Lambda$CDM and general relativity with gravitational wave standard sirens.
 \end{itemize}
+
+\resheading{Employment}
+\begin{itemize}
+\item[]
+	\ressubheadinged{Carnegie Mellon University}{Pittsburgh, WI}{Postdoctoral Fellow}{June 2023 - Present}
+\item[]
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{Research Assistant}{September, 2017 - May 2023}
+\item[]
+	\ressubheadinged{The Chinese University of Hong Kong}{Hong Kong}{Research Assistant}{March, 2016 - January 2017} 
+\item[]
+	\ressubheadinged{Caltech}{Pasadena, CA}{SURF Fellow}{June, 2015 - September, 2015}
+\end{itemize}
+
+
+\resheading{Education}
+\begin{itemize}
+\item[]
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{PhD in Physics}{September 2017 - May 2023}
+\item[]
+	\ressubheadinged{University of California, Santa Barbara}{Santa Barbara, CA}{B.S., Physics (Highest Honors)}{September 2014 - September 2017}
+\item[]
+	\ressubheadinged{Foothill College}{Los Altos Hills, CA}{Transfer Student, Physics}{September 2012 - June 2014}
+\end{itemize}
+
 
 \resheading{Awards \& Fellowships}
 \begin{itemize}
-    \item UWM Advanced Opportunity Program Fellowship (2019 - 2022)
-	\item NSF Graduate Research Fellowship (2017 - Present)
-	\item UCSB Physics Department Highest Academic Honors (June 2017)
-	\item Blanco Fellowship (Summer 2015, LIGO SURF fellowship award)
-	\item UCSB Dean's list (Fall 2014 - Spring 2017)
-	\item NSF Science, Math and Engineering (S-STEM) Scholarship  (Fall 2013 - Spring 2014)
+\item[]
+    \presentation{CMU McWilliams Postdoctoral Fellowship}{2023 - Present}{}
+\item[]
+    \presentation{UWM Advanced Opportunity Program Fellowship}{2019 - 2023}{}
+\item[]
+    \presentation{NSF Graduate Research Fellowship}{2017 - 2023}{}
+\item[]
+    \presentation{NASA Wisconsin Space Grant Consortium Fellowship}{Summer 2020 and Summer 2022}{}
+\item[]
+    \presentation{UWM Physics Department Lichtman Fellowship}{Spring 2020}{}
+\item[]
+    \presentation{UCSB Physics Department Highest Academic Honors}{Summer 2017}{}
+\item[]
+    \presentation{LIGO SURF Blanco Fellowship}{Summer 2015}{}
+\item[]
+    \presentation{UCSB Dean's list}{Fall 2014 - Spring 2017}{}
+\item[]
+    \presentation{NSF Science, Math and Engineering (S-STEM) Scholarship}{Fall 2013 - Spring 2014}{}
 \end{itemize}
 
-\resheading{Research Positions}
+
+\resheading{Student Supervision}
 \begin{itemize}
 \item
-	\ressubheading{LIGO, University of Wisconsin-Milwaukee}{Milwaukee}{Research Assistant}{Research Assistant, September, 2017 - Present}
-	\begin{itemize}
-		\resitem{My main focus is on gravitational wave cosmology with standard sirens. I am most interested in using binary black hole events for which no electromagnetic counterpart is expected to infer cosmological parameters statistically with large galaxy surveys.}
-		\resitem{I am also the lead developer of the \texttt{gwcosmo} package (to be released soon publicly) which provides analysis tools in Python to analyze gravitational wave data and infer cosmology from it. }
-		\resitem{Additional work on strongly lensed gravitational wave events: detection, model selection as well as hierarchical analysis for a population of these events.}
-	\end{itemize}
+	\ressubheadinged{Pratyusava Baral}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2021 - Present}
 \item
-	\ressubheading{LIGO, The Chinese University of Hong Kong}{Hong Kong}{Research Assistant}{Research Assistant, March, 2016 - Present}
-	\begin{itemize}
-		\resitem{Continued collaboration with Prof. Tjonnie Li for the CUHK LIGO group while at UWM. Current work focuses mainly in strongly lensed gravitational wave data analysis.}
-		\resitem{We are  also developing and testing a framework for the detection of an ensemble of sub-threshold binary neutron star signals by coherently stacking them. We can infer their simulated population properties much more effectively by combining all these events.}
-	\end{itemize}
+	\ressubheadinged{Anarya Ray}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2021 - Present}
 \item
-	\ressubheading{UCSB Department of Physics}{Santa Barbara, CA}{Undergraduate Research Assistant}{Undergraduate Research Assistant, November 2016 - May 2017}
-	\begin{itemize}
-		\resitem{Worked with Prof. Joseph Incandela for the UCSB High Energy Experimental Physics group.}
-		\resitem{Work involved the data analysis and simulation of signal and noise backgrounds for the Light Dark Matter Experiment (LDMX) in collaboration with SLAC at Stanford University.}
-	\end{itemize}
+	\ressubheadinged{Brandon Piotrzkowski}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2019 - February 2020}
+\end{itemize}
+
+\resheadingAuthor{Short Author Publications}
+
+Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October 27, 2022
+
+\begin{enumerate}
+\item 
+    \publicationArxivNew{Dark siren cosmology with binary black hole mergers}{\textbf{I. Maga\~na Hernandez}, V. D'Emilio and P. Brady}{}{In preparation}
+\item 
+    \publicationArxivNew{On the association of GW190425 with its potential electromagnetic counterpart FRB 20190425A}{\textbf{I. Maga\~na Hernandez}, V. D'Emilio, S. Morisaki, M. Bhardwaj and A. Palmese}{}{In preparation}
+\item 
+    \publicationArxivNew{Localization of binary neutron star mergers with a single Cosmic Explorer}{P. Baral, S. Morisaki, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{https://arxiv.org/abs/2304.09889}{arXiv:2304.09889}
+\item 
+    \publicationArxivNew{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}{A Ray, \textbf{I. Maga\~na Hernandez}, S. Mohite, J.D.E. Creighton and S. Kapadia}{https://arxiv.org/abs/2304.08046}{arXiv:2304.08046}
 \item
-	\ressubheading{LIGO Lab, Caltech}{Pasadena, CA}{Summer Undergraduate Research Fellow}{Summer Undergraduate Research Fellow, June 13, 2015 - September 7, 2015}
-	\begin{itemize}
-		\resitem{Developed and tested a set of feedforward IIR Wiener filters in order to filter out seismic noise out the LIGO 40m interferometer mode cleaner and arm cavities.} 
-		\resitem{The filters reduced seismic noise couplings for the mode cleaner by a factor of 7 at ~1.2 Hz and 10 at 3Hz. }
-		\resitem{Measured the noise floor of seismic sensors such as accelerometers using standard methods.}
-	\end{itemize}
-\end{itemize}
+    \publicationArxivNew{The Hitchhiker's guide to the galaxy catalog approach for gravitational wave cosmology}{J. Gair et al. (including \textbf{I. Maga\~na Hernandez})}{https://arxiv.org/abs/2212.08694}{arXiv:2212.08694}
+\item 
+    \publicationJournal{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{}{https://arxiv.org/abs/2211.01272}{arXiv:2211.01272}{2}
+\item 
+    \publicationJournal{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{Phys. Rev. D 107, 084033 (2023)}{https://arxiv.org/abs/2112.07650}{arXiv:2112.07650}{5}
+\item 
+    \publicationArxiv{A Bayesian statistical framework for identifying strongly-lensed gravitational-wave signals}{R.K.L. Lo and \textbf{I. Maga\~na Hernandez}}{https://arxiv.org/abs/2104.09339}{arXiv:2104.09339}{20}
+\item 
+    \publicationArxiv{First measurement of the Hubble parameter from bright binary black hole GW190521}{S. Mukherjee et al. (including \textbf{I. Maga\~na Hernandez})}{https://arxiv.org/abs/2009.14199}{arXiv:2009.14199}{34}
+\item 
+    \publicationJournal{A joint ranking statistic for multi-messenger astronomical searches with gravitational waves}{B. Piotrzkowski, A. Baylor and \textbf{I. Maga\~na Hernandez}}{Class. Quantum Grav. 39 085010 (2022)}{https://arxiv.org/abs/2111.12814}{arXiv:2111.12814}{1}
+\item
+    \publicationJournal{Current observations are insufficient to confidently associate the binary black hole merger GW190521 with AGN J124942.3 + 344929}{G. Ashton, K. Ackley, \textbf{I. Maga\~na Hernandez} et al.}{Class. Quantum Grav. 38 235004 (2021)}{https://arxiv.org/abs/2009.12346}{arXiv:2009.12346}{41}
+\item
+    \publicationJournal{Rapid model comparison of equations of state from gravitational wave observation of binary neutron star coalescences}{S. Ghosh, X. Liu, J.D.E. Creighton, \textbf{I. Maga\~na Hernandez} et al.}{Phys. Rev. D 104, 083003 (2021)}{https://arxiv.org/abs/2104.08681}{arXiv:2104.08681}{7}
+\item
+    \publicationJournal{Gravitational wave friction in light of GW170817 and GW190521}{S. Mastrogiovanni, L. Haegel, K. Karathanasis, \textbf{I. Maga\~na Hernandez} and D.A. Steer}{JCAP 02 043 (2021)}{https://arxiv.org/abs/2010.04047}{arXiv:2010.04047}{22}
+\item
+    \publicationJournal{Identifying strong gravitational-wave lensing during the second observing run of Advanced LIGO and Advanced Virgo}{X. Liu, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{ApJ 908 97 (2021)}{https://arxiv.org/abs/2009.06539}{arXiv:2009.06539}{31}
+\item
+    \publicationJournal{Cosmological inference using gravitational wave standard sirens: A mock data analysis}{R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{ApJ 908 97 (2021)}{https://arxiv.org/abs/1908.06050}{arXiv:1908.06050}{79}
+\item
+    \publicationJournal{Bayesian inference for compact binary coalescences with BILBY: Validation and application to the first LIGO--Virgo gravitational-wave transient catalogue}{I.M. Romero-Shaw et al. (including \textbf{I. Maga\~na Hernandez})}{MNRAS 499, 3295 (2020)}{https://arxiv.org/abs/2006.00714}{arXiv:2006.00714}{155}
+\item
+    \publicationJournal{A statistical standard siren measurement of the Hubble Constant from the LIGO/Virgo gravitational wave compact object merger GW190814 and Dark Energy Survey galaxies}{A. Palmese et al. (including \textbf{I. Maga\~na Hernandez})}{ApJL 900 L33 (2019)}{https://arxiv.org/abs/2006.14961}{arXiv:2006.14961}{60}
+\item
+    \publicationJournal{A standard siren measurement of the Hubble Constant from GW170817 without the electromagnetic counterpart}{M. Fishbach, R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{ApJL 871 L13 (2019)}{https://arxiv.org/abs/1807.05667}{arXiv:1807.05667}{137}
+\end{enumerate}
 
-\resheading{Short Author Papers}
-\begin{itemize}
-	\item A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart, M. Fishbach, R. Gray, \textbf{I. Maga\~na Hernandez}, H. Qi, A. Sur, et al. arXiv:1807.05667
-    \item Joint Bayesian Parameter Estimation and Model Selection on Strongly Lensed Gravitational-wave Events, Magaña Hernandez, I., et al. In prep..
-	\item Cosmological inference using gravitational wave standard sirens: A mock data challenge, R. Gray, \textbf{I. Maga\~na Hernandez}, et al. In prep.
-\end{itemize}
+\resheading{LIGO-Virgo Publications to which I highly contributed:}
+\begin{enumerate}
+\item
+    \publicationLVK{GW190814: Gravitational Waves from the Coalescence of a 23 Solar Mass Black Hole with a 2.6 Solar Mass Compact Object}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJL 871 L13 (2019)}{https://arxiv.org/abs/2006.12611}{arXiv:2006.12611}{871}{Led and wrote the Hubble constant analysis}
+\item
+    \publicationLVK{A Gravitational-wave Measurement of the Hubble Constant Following the Second Observing Run of Advanced LIGO and Virgo}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJ 909 218 (2021)}{https://arxiv.org/abs/1908.06060}{arXiv:1908.06060}{185}{Paper writing and analysis team member}    
+\item
+    \publicationLVK{First measurement of the Hubble constant from a dark standard siren using the Dark Energy Survey galaxies and the LIGO/Virgo binary-black-hole merger GW170814}{M. Soares-Santos, A. Palmese et al. and LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{Astrophys. J. 875, 161 (2019)}{https://arxiv.org/abs/1901.01540}{arXiv:1901.01540}{169}{Validated analysis using \texttt{gwcosmo} }  	
 
-\resheading{LIGO-Virgo publications to which I contributed:}
-\begin{itemize}
-	\item A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo, LIGO-Virgo Collaboration. In prep.
-\end{itemize}
+\end{enumerate}
 
-\resheading{Non-refereed Papers}
-\begin{itemize}
-	\item Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer, \textbf{I. Maga\~na Hernandez}, E. Quintero, K. Arai, R. Adhikari. LIGO-DCC T1500195
-\end{itemize}
 
-\resheading{Conferences/Presentations}
-\begin{itemize}
-    \item April 2019 APS Meeting | Student Presenter, Denver, April 2019. Talk:  A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo.
-    \item CUHK Seminar, The Chinese University of Hong Kong, February 2019, Invited talk, "A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo"
-    \item 2019 YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology | Student Presenter, Yukawa Institute of Theoretical Physics, Kyoto, Feb 2019. Talk: A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart.
-    \item Cosmology C-LAB seminar, Nagoya University, February 2019, Contributed talk, "A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo"
-    \item Gravitational Waves Physics and Astronomy Workshop (GWPAW 2018) | Student Presenter, University of Maryland, Maryland, December 2018. Poster: Cosmological inference using gravitational wave standard sirens: A mock data challenge.
-    \item Midwest Relativity Meeting (2018) | Student Presenter, University of Wisconsin-Milwaukee, Milwaukee, October 2018. Talk: Cosmological inference using gravitational wave standard sirens: A mock data challenge.
-    \item Les Houches Summer School: Gravitational-Wave Astronomy | Accepted Participant, Ecole de Physics des Houches, Les Houches, France July 2018.
-	\item Summer School on Gravitational-Wave Astronomy | Invited Participant, ICTS-TIFR, Bangalore, August 2016. Topics: Post-Newtonian formalism, black hole perturbation theory and GW data analysis.
-	\item 19th Annual Physical Society of Hong Kong| Student Presenter, Hong Kong University, Hong Kong, June 2016. Talk: Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer.
-	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS) | Student attendee, Washington D.C., November 2015.
-\end{itemize}
+\resheading{Invited Seminars}
+\begin{enumerate}
+\item
+	\presentation{Cardiff University}{September 2022}{Cosmology and modified gravity with binary black holes}
+\item
+	\presentation{UC Berkeley}{June 2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+\item
+	\presentation{University of Wisconsin-Milwaukee}{April 2022}{Cosmology and modified gravity with binary black hole mergers}  
+\item
+	\presentation{Eotvos Lorand University}{September 2019}{Gravitational wave cosmology with large galaxy surveys}     
+\item
+	\presentation{University of Glasgow}{August 2019}{Measuring the Hubble constant with gravitational-wave standard sirens}
+\item
+	\presentation{The Chinese University of Hong Kong}{February 2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}	
+\item
+	\presentation{Nagoya University}{February 2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}
+\end{enumerate}
+
+
+\resheading{Talks at Conferences}
+\begin{enumerate}
+\item 
+	\presentation{APS April Meeting}{April 2023}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
+\item
+	\presentation{11th Australasian Conference on General Relativity and Gravitation}{February 2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+\item
+	\presentation{Midwest Relativity Meeting}{October 2021}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+\item
+	\presentation{Midwest Relativity Meeting}{October 2020}{On the candidate electromagnetic counterpart of GW190521 and its implications on the Hubble constant}
+\item
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{October 2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
+\item
+	\presentation{Multi-Messenger Astrophysics in the Gravitational Wave Era}{September 2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
+\item
+	\presentation{YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{February 2019}{A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart}
+\item
+	\presentation{Midwest Relativity Meeting}{October 2018}{Cosmological inference using gravitational wave standard sirens: A mock data challenge}
+\item
+	\presentation{19th Annual Physical Society of Hong Kong}{June 2016}{Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer}
+
+    %\item 11th Australasian Conference on General Relativity and Gravitation, University of Tasmania, Australia, February 2022. Talk: Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers.
+
+    %\item Midwest Relativity Meeting 2021, University of Illinois Urbana-Champaign, Illinois, October 2021. Talk: Constraining the number of spacetime dimensions from GWTC-2 binary black hole mergers.
+    
+    %\item Midwest Relativity Meeting 2020, University of Notre Dame, Indiana, October 2020. Talk: On the candidate electromagnetic counterpart of GW190521 and its implications on the Hubble constant.
+    
+    %\item Gravitational Waves Physics and Astronomy Workshop, The Research Center for the Early Universe, The University of Tokyo, October 2019. Talk: A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo.
+    
+    %\item Multi-Messenger Astrophysics in the Gravitational Wave Era, Yukawa Institute for Theoretical Physics, Kyoto University, September 2019. Talk: A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO-Virgo.
+    
+    %\item 2019 YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology, Yukawa Institute of Theoretical Physics, Kyoto, Feb 2019. Talk: A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart.
+    
+    %\item Midwest Relativity Meeting 2018, University of Wisconsin-Milwaukee, Wisconsin, October 2018. Talk: Cosmological inference using gravitational wave standard sirens: A mock data challenge.
+	
+	%\item 19th Annual Physical Society of Hong Kong, Hong Kong University, June 2016. Talk: Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer.
+
+\end{enumerate}
+\resheading{Posters}
+\begin{enumerate}
+\item
+	\presentation{LVK Meeting: Cardiff University}{September 2022}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
+\item
+	\presentation{Merging Visions: Exploring Compact-Object Binaries with Gravity and Light}{June 2019}{Identifying Strong Gravitational-wave Lensing during the Second Observing Run of Advanced LIGO and Advanced Virgo}
+\item
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{December 2018}{Cosmological inference using gravitational wave standard sirens: A mock data analysis}
+\end{enumerate}
+
+
+\resheading{Additional Training}
+\begin{enumerate}
+\item
+	\presentation{Black Holes and Neutron Stars with Gravitational Waves}{October 2019}{Yukawa Institute for Theoretical Physics}
+\item
+	\presentation{The New Era of Gravitational-Wave Physics and Astrophysics}{May - July 2019}{Kavli Institute for Theoretical Physics}
+\item
+	\presentation{Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{February 2019}{Yukawa Institute for Theoretical Physics}
+\item
+	\presentation{Les Houches Summer School: Gravitational-Wave Astronomy}{July 2018}{Ecole de Physics des Houches}
+\item
+	\presentation{Summer School on Gravitational-Wave Astronomy}{August 2016}{ICTS-TIFR}
+	
+\end{enumerate}
 
 \resheading{Societies/Affiliations}
 \begin{itemize}
-	\item LIGO Scientific Collaboration (Full Member) CBC Subgroup.
-	\item American Physical Society | Undergraduate Member
-	\item Physical Society of Hong Kong | Student Member
-	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS) | Student Member
-	\item National Society of Hispanic Physicists | Student Member
-	\item Society of Physics Students, UCSB | Member
+	\item LIGO Scientific Collaboration member since June 2015
+	\item American Physical Society
+	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS)
+	\item National Society of Hispanic Physicists
 \end{itemize}
 
 \resheading{Skills}
 \begin{itemize}
 \item \textbf{Programming skills:}
 	\begin{itemize}
-	\item Proficiency with: Python (NumPy, SciPy, Pandas, Scikit-learn) C, Mathematica, LaTeX.
+	\item Proficiency with: Python (NumPy, SciPy, Pandas, Scikit-learn), JAX, C, Mathematica, LaTeX.
 	\item Familiar with: Stan, C++, MATLAB/Simulink.
-	\item LIGO related software: LALSuite, PyCBC, ligo.skymap.
+	\item LVK related software: Bilby, LALSuite, PyCBC, ligo.skymap, gwcosmo, hanabi.
 	\end{itemize}
 \item \textbf{Data Analysis:}
 	\begin{itemize}
-		\item Bayesian inference, parameter estimation, Monte Carlo methods.
-		\item Digital signal processing, machine learning and some numerical relativity experience.
+		\item Bayesian model selection and parameter estimation, Monte Carlo methods.
+		\item Digital signal processing, machine learning, and basic numerical relativity experience.
 	\end{itemize}
-\item \textbf{Languages:} Spanish (fluent). Japanese (beginner).
+\item \textbf{Languages:} English (fluent), Spanish (fluent), Korean (intermediate), and Japanese (beginner).
 \end{itemize}
 
-\resheading{Community Service}
-\begin{itemize}
-\item
-	\ressubheading{Foothill College Physics Department}{Los Altos Hills, CA}{Special Projects in Physics Member}{Special Projects in Physics Member, September 24. 2013 - June 6, 2014}
-	\begin{itemize}
-		\resitem{Worked in three separate projects: The construction and demonstration of Galileo’s incline experiment, Galileo’s water clocks, as well as the assembly of a 15 feet long Pendulum Snake that made it into the 2014 Foothill College Physics Show.}
-	\end{itemize}
-\item
-	\ressubheading{Foothill College Physics Show}{Los Altos Hills, CA}{Presenter}{Presenter, January 4, 2014 - February 4, 2014 }
-	\begin{itemize}
-		\resitem{Prepared, performed and presented a set of physics demonstrations for an audience of 25,000 people over the span of two weekends, two shows per day.}
-	\end{itemize}
-\end{itemize}
+
+\resheading{References}
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}l}
+\\
+\textbf{Patrick R. Brady} (PhD Supervisor)  & \textbf{Jolien Creighton} \\
+University of Wisconsin-Milwaukee & University of Wisconsin-Milwaukee\\
+prbrady[at]uwm.edu & jolien[at]uwm.edu
+\end{tabular*}
+
+\begin{tabular*}{6.1in}{l@{\extracolsep{\fill}}l}
+\\
+\textbf{Antonella Palmese}  & \textbf{Archisman Ghosh} \\
+Carnegie Mellon University & Ghent University\\
+apalmese[at]andrew.cmu.edu & archisman.ghosh[at]ugent.be
+\end{tabular*}
+
+\begin{tabular*}{6.1in}{l@{\extracolsep{\fill}}l}
+\\
+\textbf{Katie Breivik} & \textbf{Soichiro Morisaki}\\
+Carnegie Mellon University & The University of Tokyo\\
+kbreivik[at]andrew.cmu.edu | & soichiro[at]icrr.u-tokyo.ac.jp 
+\end{tabular*}
 
 \end{document}
