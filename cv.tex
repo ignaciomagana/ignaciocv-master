@@ -1,9 +1,13 @@
 \documentclass[letterpaper,10pt]{article}
 
 %-----------------------------------------------------------
-\usepackage[empty]{fullpage}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\pagestyle{empty}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{enumitem}
 \usepackage{color}
-\usepackage{comment}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -11,8 +15,8 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
+    pdftitle={Ignacio Magana Hernandez - Curriculum Vitae},
+    pdfauthor={Ignacio Magana Hernandez},
     }
     
 \definecolor{mygrey}{gray}{0.80}
@@ -20,100 +24,96 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Adjust margins to 0.5in on all sides
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
+% Consistent, tight list spacing (replaces the old per-entry \vspace hacks)
+\setlist[enumerate]{itemsep=3pt,topsep=3pt,parsep=0pt}
+\setlist[itemize]{itemsep=3pt,topsep=3pt,parsep=0pt}
 
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
 
 \newcommand{\ressubheadinged}[4]{
-\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4}\\
-\end{tabular*}\vspace{-6pt}}
+\end{tabular*}\vspace{-3pt}}
 
-\newcommand{\resheadingAuthor}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{7pt}}
+\newcommand{\resheadingAuthor}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{7pt}}
 
-\newcommand{\presentation}[3]{
-\begin{tabularx}
-		\textbf{#1} & \hfill #2 \\
-		\textit{#3}\\
-\end{tabularx}\vspace{-3pt}}
+\newcommand{\presentation}[3]{%
+\textbf{#1}\hfill #2\\
+\textit{#3}}
 
-\newcommand{\publicationArxiv}[5]{
-\begin{tabularx}
-		\emph{#1} \\
-		#2 \\
-		(\href{#3}{#4}, \underline{#5 citations})
-\end{tabularx}\vspace{-3pt}}
+\newcommand{\publicationArxiv}[5]{%
+\emph{#1}\\
+#2\\
+(\href{#3}{#4}, \underline{#5 citations})}
 
-\newcommand{\publicationArxivNew}[4]{
-\begin{tabularx}
-		\emph{#1} \\
-		#2 \\
-		(\href{#3}{#4})
-\end{tabularx}\vspace{-3pt}}
+\newcommand{\publicationArxivNew}[4]{%
+\emph{#1}\\
+#2\\
+#4}
 
-\newcommand{\publicationJournal}[6]{
-\begin{tabularx}
-		\emph{#1} \\
-		#2 \\
-		#3 (\href{#4}{#5}, \underline{#6 citations})
-\end{tabularx}\vspace{-3pt}}
+\newcommand{\publicationJournal}[6]{%
+\emph{#1}\\
+#2\\
+#3 (\href{#4}{#5}, \underline{#6 citations})}
 
-\newcommand{\publicationLVK}[7]{
-\begin{tabularx}
-		\emph{#1} \\
-		#2 \\
-		#3 (\href{#4}{#5}, \underline{#6 citations}) \textbf{#7}
-\end{tabularx}\vspace{-3pt}}
+\newcommand{\publicationJournalComment}[7]{%
+\emph{#1}\\
+#2\\
+#3 (\href{#4}{#5}, \underline{#6 citations}) \emph{Submitted to #7}}
 
+\newcommand{\publicationLVK}[7]{%
+\emph{#1}\\
+#2\\
+#3 (\href{#4}{#5}, \underline{#6 citations}) \textbf{#7}}
+
+\newcommand{\award}[3]{%
+\textbf{#1}\hfill #2\\
+\textit{#3}}
 %-----------------------------------------------------------
 
 
 \begin{document}
 
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Ignacio Maga\~na Hernandez}
-& Address: Department of Physics\\
+\textbf{\LARGE Ignacio Maga\~na Hernandez}
+& \\
 Email: imhernan@andrew.cmu.edu 
-& Carnegie Mellon University\\
+& Address: Department of Physics\\
 Web: http://ignaciomagana.github.io
-& 5000 Forbes Ave\\
+& Carnegie Mellon University\\
 Citizenship: USA 
-& Pittsburgh, PA 15213
+& 5000 Forbes Ave\\
+& Pittsburgh, PA 15213 \\
 \end{tabular*}
 \\
 
 \vspace{0.1in}
 
-\resheading{Research Interests}
-\begin{itemize}
-	\item[] \textbf{Gravitational wave cosmology:} measurements of the Hubble constant and other cosmological parameters using  gravitational wave standard sirens such as merging binary black holes and neutron stars. 
-	\item[] \textbf{Gravitational wave lensing:} its detection, data analysis and cosmological applications. 
-	\item[] \textbf{Modified gravitational wave propagation:} testing deviations of $\Lambda$CDM and general relativity with gravitational wave standard sirens.
-\end{itemize}
+% \resheading{Research Interests}
+% \begin{itemize}
+% 	\item[] \textbf{Gravitational wave cosmology:} measurements of the Hubble constant and other cosmological parameters using  gravitational wave standard sirens such as merging binary black holes and neutron stars. 
+% 	\item[] \textbf{Gravitational wave lensing:} its detection, data analysis and cosmological applications. 
+% 	\item[] \textbf{Modified gravitational wave propagation:} testing deviations of $\Lambda$CDM and general relativity with gravitational wave standard sirens.
+% \end{itemize}
 
 \resheading{Employment}
 \begin{itemize}
 \item[]
-	\ressubheadinged{Carnegie Mellon University}{Pittsburgh, WI}{Postdoctoral Fellow}{June 2023 - Present}
+	\ressubheadinged{Carnegie Mellon University}{Pittsburgh, PA}{McWilliams Postdoctoral Fellow}{June 2023 - Present}
 \item[]
-	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{Research Assistant}{September, 2017 - May 2023}
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{NSF Graduate Research Fellow}{September, 2017 - May 2023}
 \item[]
-	\ressubheadinged{The Chinese University of Hong Kong}{Hong Kong}{Research Assistant}{March, 2016 - January 2017} 
+	\ressubheadinged{The Chinese University of Hong Kong}{Hong Kong, Hong Kong}{Undergraduate Research Assistant}{March, 2016 - January 2017} 
 \item[]
-	\ressubheadinged{Caltech}{Pasadena, CA}{SURF Fellow}{June, 2015 - September, 2015}
+	\ressubheadinged{Caltech}{Pasadena, CA}{LIGO SURF Fellow}{June, 2015 - September, 2015}
 \end{itemize}
 
 
@@ -130,102 +130,167 @@ Citizenship: USA
 
 \resheading{Awards \& Fellowships}
 \begin{itemize}
-\item[]
-    \presentation{CMU McWilliams Postdoctoral Fellowship}{2023 - Present}{}
-\item[]
-    \presentation{UWM Advanced Opportunity Program Fellowship}{2019 - 2023}{}
-\item[]
-    \presentation{NSF Graduate Research Fellowship}{2017 - 2023}{}
-\item[]
-    \presentation{NASA Wisconsin Space Grant Consortium Fellowship}{Summer 2020 and Summer 2022}{}
-\item[]
-    \presentation{UWM Physics Department Lichtman Fellowship}{Spring 2020}{}
-\item[]
-    \presentation{UCSB Physics Department Highest Academic Honors}{Summer 2017}{}
-\item[]
-    \presentation{LIGO SURF Blanco Fellowship}{Summer 2015}{}
-\item[]
-    \presentation{UCSB Dean's list}{Fall 2014 - Spring 2017}{}
-\item[]
-    \presentation{NSF Science, Math and Engineering (S-STEM) Scholarship}{Fall 2013 - Spring 2014}{}
+\item
+    \award{CMU McWilliams Postdoctoral Fellowship}{2023 - Present}{McWilliams Center for Cosmology and Astrophysics three year fellowship.}
+\item
+    \award{CMU McWilliams Seed Grant}{2025}{Internal grant funding exploratory  projects to generate preliminary results for high impact research.}
+\item
+    \award{UWM Advanced Opportunity Program Fellowship}{2019 - 2023}{UWM fellowship supporting underrepresented graduate students for three years.}
+\item
+    \award{NSF Graduate Research Fellowship}{2017 - 2023}{NSF fellowship supporting graduate students for three years.}
+\item
+    \award{NASA Wisconsin Space Grant Consortium Fellowship}{Summer 2020, 2021, 2022}{NASA funded fellowship for graduate research in STEM at Wisconsin institutions.}
+\item
+    \award{UWM Physics Department Lichtman Fellowship}{Spring 2020}{Departmental fellowship awarded for exceptional academic achievement in physics.}
+\item
+    \award{UCSB Physics Department Highest Academic Honors}{Summer 2017}{Awarded to graduating physics students with at least a 3.9 GPA in physics courses only.}
+\item
+    \award{LIGO SURF Blanco Fellowship}{Summer 2015}{Summer Research Fellowship at Caltech/LIGO, supporting undergraduates in GW science.}
+\item
+    \award{UCSB Dean's list}{Fall 2014 - Spring 2017}{Recognition for maintaining a GPA of 3.75 per quarter.}
+\item
+    \award{NSF Science, Math and Engineering (S-STEM) Scholarship}{Fall 2013 - Spring 2014}{NSF scholarship providing support to students pursuing STEM degrees.}
 \end{itemize}
 
+\resheading{Publication Summary}
 
-\resheading{Student Supervision}
-\begin{itemize}
-\item
-	\ressubheadinged{Pratyusava Baral}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2021 - Present}
-\item
-	\ressubheadinged{Anarya Ray}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2021 - Present}
-\item
-	\ressubheadinged{Brandon Piotrzkowski}{University of Wisconsin-Milwaukee}{PhD student (co-advised)}{September 2019 - February 2020}
-\end{itemize}
+\begin{center}
+\begin{tabular}{ c c c }
+\textbf{h-index:} \href{https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20I.Magana.Hernandez.1&ui-citation-summary=true}{52} \,/\, \href{https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20I.Magana.Hernandez.1%20-%20abbott%20-%20abac&ui-citation-summary=true}{17} 
+& \ \ \textbf{Publications:} 76 \,/\, 30 
+& \ \ \textbf{Citations:} 44k \,/\, 2.0k \\
+\end{tabular}
+\end{center}
 
-\resheadingAuthor{Short Author Publications}
+First number includes LIGO collaboration papers; second number excludes them\\
+Citations according to \href{https://inspirehep.net/}{inspirehep.net} in July 2026
 
-Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October 27, 2022
+\newpage
+
+\resheadingAuthor{First/Second Author Publications}
 
 \begin{enumerate}
 \item 
-    \publicationArxivNew{Dark siren cosmology with binary black hole mergers with DESI}{\textbf{I. Maga\~na Hernandez}, V. D'Emilio and P. Brady}{}{In preparation}
+    \publicationArxivNew{Dark siren cosmology with the Dark Energy Spectroscopic Instrument}{\textbf{I. Maga\~na Hernandez}, A. Palmese et al.}{}{Under DESI internal review}
 \item 
-    \publicationArxivNew{On the association of GW190425 with its potential electromagnetic counterpart FRB 20190425A}{\textbf{I. Maga\~na Hernandez}, V. D'Emilio, S. Morisaki, M. Bhardwaj and A. Palmese}{}{In preparation}
+    \publicationJournalComment{Lucky Strikes: On the Origins of GW190814 Through Isolated Binary Evolution}{\textbf{I. Maga\~na Hernandez} and K. Breivik}{}{https://arxiv.org/abs/2511.16648}{arXiv:2511.16648}{1}{ApJL}
 \item 
-    \publicationJournal{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{}{https://arxiv.org/abs/2211.01272}{arXiv:2211.01272}{2}
+    \publicationJournalComment{Spectral siren cosmology from gravitational-wave observations in GWTC-4.0}{\textbf{I. Maga\~na Hernandez} and A. Palmese}{}{https://arxiv.org/abs/2509.03607}{arXiv:2509.03607}{3}{Physical Review Letters}
+\item 
+    \publicationJournalComment{Astrophysics informed Gaussian processes for gravitational-wave populations: Evidence for the onset of the pair-instability supernova mass gap}{\textbf{I. Maga\~na Hernandez} and A. Palmese}{}{https://arxiv.org/abs/2508.19208}{arXiv:2508.19208}{7}{Physical Review Letters}
+\item 
+    \publicationJournal{A new bump in the night: evidence of a new feature in the binary black hole mass distribution at 70 $M_\odot$ from gravitational-wave observations}{\textbf{I. Maga\~na Hernandez} and A. Palmese}{Phys. Rev. D 111, 083031 (2025)}{https://arxiv.org/abs/2407.02460}{arXiv:2407.02460}{10}
+\item 
+    \publicationJournal{Searching for binary black hole sub-populations in gravitational wave data using binned Gaussian processes}{A. Ray, \textbf{I. Maga\~na Hernandez}, K. Breivik, J.D.E. Creighton}{ApJ 991 17 (2025)}{https://arxiv.org/abs/2404.03166}{arXiv:2404.03166}{31}
+\item 
+    \publicationJournalComment{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}{\textbf{I. Maga\~na Hernandez} and A. Ray}{}{https://arxiv.org/abs/2404.02522}{arXiv:2404.02522}{24}{Physical Review D}
+\item 
+    \publicationJournal{On the association of GW190425 with its potential electromagnetic counterpart FRB 20190425A}{\textbf{I. Maga\~na Hernandez}, V. D'Emilio, S. Morisaki, M. Bhardwaj and A. Palmese}{ApJL 971 L5 (2024)}{https://arxiv.org/abs/2404.02496}{arXiv:2404.02496}{13}
+\item 
+    \publicationJournal{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}{A Ray, \textbf{I. Maga\~na Hernandez}, S. Mohite, J.D.E. Creighton and S. Kapadia}{ApJ 957 37 (2023)}{https://arxiv.org/abs/2304.08046}{arXiv:2304.08046}{66}
+\item 
+    \publicationJournalComment{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{}{https://arxiv.org/abs/2211.01272}{arXiv:2211.01272}{11}{Physical Review D}
+\item 
+    \publicationJournal{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{Phys. Rev. D 107, 084033 (2023)}{https://arxiv.org/abs/2112.07650}{arXiv:2112.07650}{19}
+\item 
+    \publicationJournal{A Bayesian statistical framework for identifying strongly-lensed gravitational-wave signals}{R.K.L. Lo and \textbf{I. Maga\~na Hernandez}}{Phys. Rev. D 107, 123015 (2023)}{https://arxiv.org/abs/2104.09339}{arXiv:2104.09339}{78}
 \item
-    \publicationArxiv{First measurement of the Hubble parameter from bright binary black hole GW190521}{S. Mukherjee et al. (including \textbf{I. Maga\~na Hernandez})}{https://arxiv.org/abs/2009.14199}{arXiv:2009.14199}{34}
-\item 
-    \publicationArxiv{Challenges for Fast Radio Bursts as Multi-Messenger Sources from Binary Neutron Star Mergers}{M. Bhardwaj et al. (including \textbf{I. Maga\~na Hernandez}}{https://arxiv.org/abs/2306.00948}{arXiv:2306.00948}{9}
+    \publicationJournal{Identifying strong gravitational-wave lensing during the second observing run of Advanced LIGO and Advanced Virgo}{X. Liu, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{ApJ 908 97 (2021)}{https://arxiv.org/abs/2009.06539}{arXiv:2009.06539}{89}
+\item
+    \publicationJournal{Cosmological inference using gravitational wave standard sirens: A mock data analysis}{R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{Phys. Rev. D 101, 122001 (2020)}{https://arxiv.org/abs/1908.06050}{arXiv:1908.06050}{211}
+\end{enumerate}
+
+\newpage
+
+\resheadingAuthor{Other Short Author Work}
+
+\begin{enumerate}
+\item
+    \publicationArxiv{AT2025ulz and S250818k: Investigating early time observations of a subsolar mass gravitational-wave binary neutron star merger candidate}
+    {X. Hall et al. (including \textbf{I. Maga\~na Hernandez})}
+    {https://arxiv.org/abs/2510.24620}{arXiv:2510.24620}{1}
+\item
+    \publicationArxiv{AT2025ulz and S250818k: Deep X-ray and radio limits on off-axis afterglow emission and prospects for future discovery
+}{B. O'Connor et al. (including \textbf{I. Maga\~na Hernandez})}
+    {https://arxiv.org/abs/2510.23728}{arXiv:2510.23728}{1}
+\item
+    \publicationArxiv{AT2025ulz and S250818k: Leveraging DESI spectroscopy in the hunt for a kilonova associated with a sub-solar mass gravitational wave candidate}{X. Hall et al. (including \textbf{I. Maga\~na Hernandez})}
+    {https://arxiv.org/abs/2510.23723}{arXiv:2510.23723}{1}
+\item
+    \publicationJournal{Kilonova Constraints for the LIGO/Virgo/KAGRA Neutron Star Merger Candidate S250206dm: GW-MMADS Observations
+}{L. Hu et al. (including \textbf{I. Maga\~na Hernandez})}{ApJL 990 L46 (2025)}{https://arxiv.org/abs/2506.22626}{arXiv:2506.22626}{3}
 \item 
     \publicationJournal{A Dark Siren Measurement of the Hubble Constant with the LIGO/Virgo Gravitational Wave Event GW190412 and DESI Galaxies
-}{W. Ballard et al. (including \textbf{I. Maga\~na Hernandez})}{Res. Notes AAS 7 250 (2023)}{https://arxiv.org/abs/2311.13062}{arXiv:2311.13062}{2}
+}{W. Ballard, A. Palmese, \textbf{I. Maga\~na Hernandez} et al. }{Res. Notes AAS 7 250 (2023)}{https://arxiv.org/abs/2311.13062}{arXiv:2311.13062}{22}
 \item
     \publicationJournal{Follow-up analyses to the O3 LIGO–Virgo–KAGRA lensing searches
-}{J. Janquart et al. (including \textbf{I. Maga\~na Hernandez})}{MNRAS 526, 3832 (2023)}{https://arxiv.org/abs/2306.03827}{arXiv:2306.03827}{8}
-\item
-    \publicationJournal{Localization of binary neutron star mergers with a single Cosmic Explorer}{P. Baral, S. Morisaki, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{Phys. Rev. D 08, 043010 (2021)}{https://arxiv.org/abs/2304.09889}{arXiv:2304.09889}{5}
+}{J. Janquart et al. (including \textbf{I. Maga\~na Hernandez})}{MNRAS 526, 3832 (2023)}{https://arxiv.org/abs/2306.03827}{arXiv:2306.03827}{55}
 \item 
-    \publicationJournal{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}{A Ray, \textbf{I. Maga\~na Hernandez}, S. Mohite, J.D.E. Creighton and S. Kapadia}{ApJ 957 37 (2023)}{https://arxiv.org/abs/2304.08046}{arXiv:2304.08046}{6}
+    \publicationJournal{Challenges for Fast Radio Bursts as Multi-Messenger Sources from Binary Neutron Star Mergers}{M. Bhardwaj, A. Palmese, {\textbf{I. Maga\~na Hernandez}}, V. D'Emilio and S. Morisaki}{ApJ 977 122 (2024)}{https://arxiv.org/abs/2306.00948}{arXiv:2306.00948}{27}
 \item
-    \publicationJournal{The Hitchhiker's guide to the galaxy catalog approach for gravitational wave cosmology}{J. Gair et al. (including \textbf{I. Maga\~na Hernandez})}{AJ 166 22 (2023)}{https://arxiv.org/abs/2212.08694}{arXiv:2212.08694}{18}
+    \publicationJournal{Localization of binary neutron star mergers with a single Cosmic Explorer}{P. Baral, S. Morisaki, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{Phys. Rev. D 108, 043010 (2023)}{https://arxiv.org/abs/2304.09889}{arXiv:2304.09889}{14}
+\item
+    \publicationJournal{The Hitchhiker's guide to the galaxy catalog approach for gravitational wave cosmology}{J. Gair et al. (including \textbf{I. Maga\~na Hernandez})}{AJ 166 22 (2023)}{https://arxiv.org/abs/2212.08694}{arXiv:2212.08694}{75}
 \item 
-    \publicationJournal{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}{\textbf{I. Maga\~na Hernandez}}{Phys. Rev. D 107, 084033 (2023)}{https://arxiv.org/abs/2112.07650}{arXiv:2112.07650}{5}
-\item 
-    \publicationJournal{A Bayesian statistical framework for identifying strongly-lensed gravitational-wave signals}{R.K.L. Lo and \textbf{I. Maga\~na Hernandez}}{Phys. Rev. D 107, 123015 }{https://arxiv.org/abs/2104.09339}{arXiv:2104.09339}{20}
-\item 
-    \publicationJournal{A joint ranking statistic for multi-messenger astronomical searches with gravitational waves}{B. Piotrzkowski, A. Baylor and \textbf{I. Maga\~na Hernandez}}{Class. Quantum Grav. 39 085010 (2022)}{https://arxiv.org/abs/2111.12814}{arXiv:2111.12814}{1}
+    \publicationJournal{A joint ranking statistic for multi-messenger astronomical searches with gravitational waves}{B. Piotrzkowski, A. Baylor and \textbf{I. Maga\~na Hernandez}}{Class. Quantum Grav. 39 085010 (2022)}{https://arxiv.org/abs/2111.12814}{arXiv:2111.12814}{8}
 \item
-    \publicationJournal{Current observations are insufficient to confidently associate the binary black hole merger GW190521 with AGN J124942.3 + 344929}{G. Ashton, K. Ackley, \textbf{I. Maga\~na Hernandez} et al.}{Class. Quantum Grav. 38 235004 (2021)}{https://arxiv.org/abs/2009.12346}{arXiv:2009.12346}{41}
+    \publicationJournal{Rapid model comparison of equations of state from gravitational wave observation of binary neutron star coalescences}{S. Ghosh, X. Liu, J.D.E. Creighton, \textbf{I. Maga\~na Hernandez} et al.}{Phys. Rev. D 104, 083003 (2021)}{https://arxiv.org/abs/2104.08681}{arXiv:2104.08681}{23}
 \item
-    \publicationJournal{Rapid model comparison of equations of state from gravitational wave observation of binary neutron star coalescences}{S. Ghosh, X. Liu, J.D.E. Creighton, \textbf{I. Maga\~na Hernandez} et al.}{Phys. Rev. D 104, 083003 (2021)}{https://arxiv.org/abs/2104.08681}{arXiv:2104.08681}{7}
+    \publicationJournal{Gravitational wave friction in light of GW170817 and GW190521}{S. Mastrogiovanni, L. Haegel, K. Karathanasis, \textbf{I. Maga\~na Hernandez} and D.A. Steer}{JCAP 02 043 (2021)}{https://arxiv.org/abs/2010.04047}{arXiv:2010.04047}{38}
 \item
-    \publicationJournal{Gravitational wave friction in light of GW170817 and GW190521}{S. Mastrogiovanni, L. Haegel, K. Karathanasis, \textbf{I. Maga\~na Hernandez} and D.A. Steer}{JCAP 02 043 (2021)}{https://arxiv.org/abs/2010.04047}{arXiv:2010.04047}{22}
+    \publicationJournal{Current observations are insufficient to confidently associate the binary black hole merger GW190521 with AGN J124942.3 + 344929}{G. Ashton, K. Ackley, \textbf{I. Maga\~na Hernandez} et al.}{Class. Quantum Grav. 38 235004 (2021)}{https://arxiv.org/abs/2009.12346}{arXiv:2009.12346}{97}
 \item
-    \publicationJournal{Identifying strong gravitational-wave lensing during the second observing run of Advanced LIGO and Advanced Virgo}{X. Liu, \textbf{I. Maga\~na Hernandez} and J.D.E. Creighton}{ApJ 908 97 (2021)}{https://arxiv.org/abs/2009.06539}{arXiv:2009.06539}{31}
+    \publicationArxiv{First measurement of the Hubble parameter from bright binary black hole GW190521}{S. Mukherjee et al. (including \textbf{I. Maga\~na Hernandez})}{https://arxiv.org/abs/2009.14199}{arXiv:2009.14199}{63}
 \item
-    \publicationJournal{Cosmological inference using gravitational wave standard sirens: A mock data analysis}{R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{ApJ 908 97 (2021)}{https://arxiv.org/abs/1908.06050}{arXiv:1908.06050}{79}
+    \publicationJournal{Bayesian inference for compact binary coalescences with BILBY: Validation and application to the first LIGO--Virgo gravitational-wave transient catalogue}{I.M. Romero-Shaw et al. (including \textbf{I. Maga\~na Hernandez})}{MNRAS 499, 3295 (2020)}{https://arxiv.org/abs/2006.00714}{arXiv:2006.00714}{492}
 \item
-    \publicationJournal{Bayesian inference for compact binary coalescences with BILBY: Validation and application to the first LIGO--Virgo gravitational-wave transient catalogue}{I.M. Romero-Shaw et al. (including \textbf{I. Maga\~na Hernandez})}{MNRAS 499, 3295 (2020)}{https://arxiv.org/abs/2006.00714}{arXiv:2006.00714}{155}
+    \publicationJournal{A statistical standard siren measurement of the Hubble Constant from the LIGO/Virgo gravitational wave compact object merger GW190814 and Dark Energy Survey galaxies}{A. Palmese et al. (including \textbf{I. Maga\~na Hernandez})}{ApJL 900 L33 (2020)}{https://arxiv.org/abs/2006.14961}{arXiv:2006.14961}{141}
 \item
-    \publicationJournal{A statistical standard siren measurement of the Hubble Constant from the LIGO/Virgo gravitational wave compact object merger GW190814 and Dark Energy Survey galaxies}{A. Palmese et al. (including \textbf{I. Maga\~na Hernandez})}{ApJL 900 L33 (2019)}{https://arxiv.org/abs/2006.14961}{arXiv:2006.14961}{60}
-\item
-    \publicationJournal{A standard siren measurement of the Hubble Constant from GW170817 without the electromagnetic counterpart}{M. Fishbach, R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{ApJL 871 L13 (2019)}{https://arxiv.org/abs/1807.05667}{arXiv:1807.05667}{137}
+    \publicationJournal{A standard siren measurement of the Hubble Constant from GW170817 without the electromagnetic counterpart}{M. Fishbach, R. Gray, \textbf{I. Maga\~na Hernandez} et al.}{ApJL 871 L13 (2019)}{https://arxiv.org/abs/1807.05667}{arXiv:1807.05667}{252}
 \end{enumerate}
+
+
 
 \resheading{LIGO-Virgo Publications to which I highly contributed:}
 \begin{enumerate}
+
 \item
-    \publicationLVK{GW190814: Gravitational Waves from the Coalescence of a 23 Solar Mass Black Hole with a 2.6 Solar Mass Compact Object}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJL 871 L13 (2019)}{https://arxiv.org/abs/2006.12611}{arXiv:2006.12611}{871}{Led and wrote the Hubble constant analysis}
+    \publicationLVK{GW190814: Gravitational Waves from the Coalescence of a 23 Solar Mass Black Hole with a 2.6 Solar Mass Compact Object}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJL 896 L44 (2020)}{https://arxiv.org/abs/2006.12611}{arXiv:2006.12611}{1823}{Led and wrote the Hubble constant analysis}
 \item
-    \publicationLVK{A Gravitational-wave Measurement of the Hubble Constant Following the Second Observing Run of Advanced LIGO and Virgo}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJ 909 218 (2021)}{https://arxiv.org/abs/1908.06060}{arXiv:1908.06060}{185}{Paper writing and analysis team member}    
+    \publicationLVK{A Gravitational-wave Measurement of the Hubble Constant Following the Second Observing Run of Advanced LIGO and Virgo}{LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJ 909 218 (2021)}{https://arxiv.org/abs/1908.06060}{arXiv:1908.06060}{386}{Paper writing and analysis team member}    
 \item
-    \publicationLVK{First measurement of the Hubble constant from a dark standard siren using the Dark Energy Survey galaxies and the LIGO/Virgo binary-black-hole merger GW170814}{M. Soares-Santos, A. Palmese et al. and LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{Astrophys. J. 875, 161 (2019)}{https://arxiv.org/abs/1901.01540}{arXiv:1901.01540}{169}{Validated analysis using \texttt{gwcosmo} }  	
+    \publicationLVK{First measurement of the Hubble constant from a dark standard siren using the Dark Energy Survey galaxies and the LIGO/Virgo binary-black-hole merger GW170814}{M. Soares-Santos, A. Palmese et al. and LIGO Scientific and Virgo Collaborations (including \textbf{I. Maga\~na Hernandez})}{ApJL 876 L7 (2019)}{https://arxiv.org/abs/1901.01540}{arXiv:1901.01540}{320}{Validated analysis using \texttt{gwcosmo} }  	
 
 \end{enumerate}
 
 
 \resheading{Invited Seminars}
 \begin{enumerate}
+\item
+	\presentation{American Museum of Natural History}{October 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
+}
+\item
+	\presentation{Vanderbilt University}{April 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
+}
+
+\item
+	\presentation{KAGRA Seminar}{April 2025}{Binary black hole populations and cosmology
+}
+
+\item
+	\presentation{Stanford University (KIPAC Seminar)}{March 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
+}
+
+\item
+	\presentation{Carnegie Mellon University (STAMPS Seminar)}{January 2025}{Binary black hole populations and cosmology
+}
+
+\item
+	\presentation{Montclair State University}{September 2023}{Cosmology, Lensing, and Modified Gravity with Gravitational Waves
+}
+\item
+	\presentation{Carnegie Mellon University}{September 2023}{Testing general relativity with strongly lensed gravitational waves 
+}
 \item
 	\presentation{Cardiff University}{September 2022}{Cosmology and modified gravity with binary black holes}
 \item
@@ -242,9 +307,25 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October
 	\presentation{Nagoya University}{February 2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}
 \end{enumerate}
 
+\newpage
 
 \resheading{Talks at Conferences}
 \begin{enumerate}
+\item 
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{December 2025}{Dark Siren Cosmology with the Dark Energy Spectroscopic Instrument (DESI)
+}
+\item 
+	\presentation{COSMO25}{October 2025}{Gravitational-wave dark siren cosmology with DESI}
+\item 
+	\presentation{Multimessenger Astronomy in the Era of Foundational AI}{August 2025}{Trends in the GWTC-3 Binary Black Hole Merger Population with UMAP}
+\item 
+	\presentation{Summer DESI Collaboration Meeting}{July 2025}{Gravitational-wave cosmology with DESI}
+\item 
+	\presentation{APS Global Physics Summit}{April 2025}{Lucky Strikes: Unraveling the asymmetric origins of GW190814 through binary field evolution}
+\item 
+	\presentation{The 6th neighborhood workshop}{April 2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
+\item 
+	\presentation{Gravitational-wave populations: what’s next?}{July 2023}{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}
 \item 
 	\presentation{APS April Meeting}{April 2023}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
 \item
@@ -283,6 +364,12 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October
 \end{enumerate}
 \resheading{Posters}
 \begin{enumerate}
+\item 
+	\presentation{APS Global Physics Summit}{April 2025}{A new bump in the night: evidence of a new feature in the binary black hole mass distribution at 70 $M_\odot$ from gravitational-wave observations}
+\item
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{May 2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
+\item
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{May 2024}{Backpop: Data Driven Population Synthesis inference on Compact Binary Mergers}
 \item
 	\presentation{LVK Meeting: Cardiff University}{September 2022}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
 \item
@@ -291,9 +378,12 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October
 	\presentation{Gravitational Waves Physics and Astronomy Workshop}{December 2018}{Cosmological inference using gravitational wave standard sirens: A mock data analysis}
 \end{enumerate}
 
+\newpage
 
-\resheading{Additional Training}
+\resheading{Other Workshops}
 \begin{enumerate}
+\item
+	\presentation{Multi-messenger Transients from Binary Mergers and Stellar Explosions}{August 2024}{Aspen Center for Physics}
 \item
 	\presentation{Black Holes and Neutron Stars with Gravitational Waves}{October 2019}{Yukawa Institute for Theoretical Physics}
 \item
@@ -309,10 +399,31 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October
 
 \resheading{Societies/Affiliations}
 \begin{itemize}
-	\item LIGO Scientific Collaboration member since June 2015
+	\item Dark Energy Spectroscopic Instrument (DESI) member (June 2023 - Present)
+	\item LIGO Scientific Collaboration member (June 2015 - June 2023)
 	\item American Physical Society
 	\item Society for Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS)
 	\item National Society of Hispanic Physicists
+\end{itemize}
+
+\resheading{Student Mentoring}
+\begin{itemize}
+\item
+	\ressubheadinged{Kaitlyn Pak}{Carnegie Mellon University}{Undergraduate student - Multi-messenger associations with GWs}{September 2025 - Present}
+\item
+	\ressubheadinged{Ariel Amsellem}{Carnegie Mellon University}{PhD student - Standard siren cosmology.}{September 2023 - Present}
+\item
+	\ressubheadinged{Simon Yeung}{University of Wisconsin-Milwaukee}{PhD student - GW population systematics.}{September 2023 - Present}
+\item
+	\ressubheadinged{Julia Yoon}{Carnegie Mellon University}{Undergraduate student - Dark siren cosmology with GW170817}{September 2024 - May 2025}
+\item
+	\ressubheadinged{Diego Michel}{Carnegie Mellon University}{Undergraduate student - Gaussian processes for GW populations.}{September 2023 - May 2024}
+\item
+	\ressubheadinged{Anarya Ray}{University of Wisconsin-Milwaukee}{PhD student (co-advised) - Binned Gaussian processes for GW populations.}{September 2021 - June 2024}
+\item
+	\ressubheadinged{Pratyusava Baral}{University of Wisconsin-Milwaukee}{PhD student (co-advised) - Localization of BNS events with 3G GW detectors.}{September 2021 - May 2023}
+\item
+	\ressubheadinged{Brandon Piotrzkowski}{University of Wisconsin-Milwaukee}{PhD student (co-advised) - Multi-messenger association statistics.}{September 2019 - February 2020}
 \end{itemize}
 
 \resheading{Skills}
@@ -333,12 +444,12 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} on October
 
 
 \resheading{References}
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}l}
-\\
-\textbf{Patrick R. Brady} (PhD Supervisor)  & \textbf{Jolien Creighton} \\
-University of Wisconsin-Milwaukee & University of Wisconsin-Milwaukee\\
-prbrady[at]uwm.edu & jolien[at]uwm.edu
-\end{tabular*}
+%\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}l}
+%\\
+%\textbf{Patrick R. Brady} (PhD Supervisor)  & \textbf{Jolien Creighton} \\
+%University of Wisconsin-Milwaukee & University of Wisconsin-Milwaukee\\
+%prbrady[at]uwm.edu & jolien[at]uwm.edu
+%\end{tabular*}
 
 \begin{tabular*}{6.1in}{l@{\extracolsep{\fill}}l}
 \\
@@ -351,7 +462,7 @@ apalmese[at]andrew.cmu.edu & archisman.ghosh[at]ugent.be
 \\
 \textbf{Katie Breivik} & \textbf{Soichiro Morisaki}\\
 Carnegie Mellon University & The University of Tokyo\\
-kbreivik[at]andrew.cmu.edu | & soichiro[at]icrr.u-tokyo.ac.jp 
+kbreivik[at]andrew.cmu.edu & soichiro[at]icrr.u-tokyo.ac.jp 
 \end{tabular*}
 
 \end{document}
