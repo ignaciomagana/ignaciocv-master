@@ -75,8 +75,9 @@
 #3 (\href{#4}{#5}, \underline{#6 citations}) \textbf{#7}}
 
 \newcommand{\award}[3]{%
-\textbf{#1}\hfill #2\\
-\textit{#3}}
+\textbf{#1}\hfill #2%
+\if\relax\detokenize{#3}\relax\else\\%
+\textit{#3}\fi}
 %-----------------------------------------------------------
 
 
@@ -107,24 +108,24 @@ Citizenship: USA
 \resheading{Employment}
 \begin{itemize}
 \item[]
-	\ressubheadinged{Carnegie Mellon University}{Pittsburgh, PA}{McWilliams Postdoctoral Fellow}{June 2023 - Present}
+	\ressubheadinged{Carnegie Mellon University}{Pittsburgh, PA}{McWilliams Postdoctoral Fellow}{2023 -- Present}
 \item[]
-	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{NSF Graduate Research Fellow}{September, 2017 - May 2023}
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{NSF Graduate Research Fellow}{2017 -- 2023}
 \item[]
-	\ressubheadinged{The Chinese University of Hong Kong}{Hong Kong, Hong Kong}{Undergraduate Research Assistant}{March, 2016 - January 2017} 
+	\ressubheadinged{The Chinese University of Hong Kong}{Hong Kong, Hong Kong}{Undergraduate Research Assistant}{2016 -- 2017} 
 \item[]
-	\ressubheadinged{Caltech}{Pasadena, CA}{LIGO SURF Fellow}{June, 2015 - September, 2015}
+	\ressubheadinged{Caltech}{Pasadena, CA}{LIGO SURF Fellow}{2015}
 \end{itemize}
 
 
 \resheading{Education}
 \begin{itemize}
 \item[]
-	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{PhD in Physics}{September 2017 - May 2023}
+	\ressubheadinged{University of Wisconsin-Milwaukee}{Milwaukee, WI}{PhD in Physics}{2017 -- 2023}
 \item[]
-	\ressubheadinged{University of California, Santa Barbara}{Santa Barbara, CA}{B.S., Physics (Highest Honors)}{September 2014 - September 2017}
+	\ressubheadinged{University of California, Santa Barbara}{Santa Barbara, CA}{B.S., Physics (Highest Honors)}{2014 -- 2017}
 \item[]
-	\ressubheadinged{Foothill College}{Los Altos Hills, CA}{Transfer Student, Physics}{September 2012 - June 2014}
+	\ressubheadinged{Foothill College}{Los Altos Hills, CA}{Transfer Student, Physics}{2012 -- 2014}
 \end{itemize}
 
 
@@ -139,17 +140,17 @@ Citizenship: USA
 \item
     \award{NSF Graduate Research Fellowship}{2017 - 2022}{NSF fellowship supporting graduate students for three years.}
 \item
-    \award{NASA Wisconsin Space Grant Consortium Fellowship}{Summer 2020, 2021, 2022}{NASA funded fellowship for graduate research in STEM at Wisconsin institutions.}
+    \award{NASA Wisconsin Space Grant Consortium Fellowship}{2020 -- 2022}{NASA funded fellowship for graduate research in STEM at Wisconsin institutions.}
 \item
-    \award{UWM Physics Department Lichtman Fellowship}{Spring 2020}{Departmental fellowship awarded for exceptional academic achievement in physics.}
+    \award{UWM Physics Department Lichtman Fellowship}{2020}{Departmental fellowship awarded for exceptional academic achievement in physics.}
 \item
-    \award{UCSB Physics Department Highest Academic Honors}{Summer 2017}{}
+    \award{UCSB Physics Department Highest Academic Honors}{2017}{}
 \item
-    \award{LIGO SURF Blanco Fellowship}{Summer 2015}{Summer Research Fellowship at Caltech/LIGO, supporting undergraduates in GW science.}
+    \award{LIGO SURF Blanco Fellowship}{2015}{Summer Research Fellowship at Caltech/LIGO, supporting undergraduates in GW science.}
 \item
 %    \award{UCSB Dean's list}{Fall 2014 - Spring 2017}{}
 \item
-    \award{NSF Science, Math and Engineering (S-STEM) Scholarship}{Fall 2013 - Spring 2014}{NSF scholarship providing support to students pursuing STEM degrees.}
+    \award{NSF Science, Math and Engineering (S-STEM) Scholarship}{2013 -- 2014}{NSF scholarship providing support to students pursuing STEM degrees.}
 \end{itemize}
 
 \resheading{Publication Summary}
@@ -286,81 +287,81 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} in October
 \resheading{Invited Seminars}
 \begin{enumerate}
 \item
-	\presentation{American Museum of Natural History}{October 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
+	\presentation{American Museum of Natural History}{2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
 }
 \item
-	\presentation{Vanderbilt University}{April 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
-}
-
-\item
-	\presentation{KAGRA Seminar}{April 2025}{Binary black hole populations and cosmology
+	\presentation{Vanderbilt University}{2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
 }
 
 \item
-	\presentation{Stanford University (KIPAC Seminar)}{March 2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
+	\presentation{KAGRA Seminar}{2025}{Binary black hole populations and cosmology
 }
 
 \item
-	\presentation{Carnegie Mellon University (STAMPS Seminar)}{January 2025}{Binary black hole populations and cosmology
+	\presentation{Stanford University (KIPAC Seminar)}{2025}{Binary black hole populations and cosmology with gravitational-wave observations and DESI
 }
 
 \item
-	\presentation{Montclair State University}{September 2023}{Cosmology, Lensing, and Modified Gravity with Gravitational Waves
+	\presentation{Carnegie Mellon University (STAMPS Seminar)}{2025}{Binary black hole populations and cosmology
+}
+
+\item
+	\presentation{Montclair State University}{2023}{Cosmology, Lensing, and Modified Gravity with Gravitational Waves
 }
 \item
-	\presentation{Carnegie Mellon University}{September 2023}{Testing general relativity with strongly lensed gravitational waves 
+	\presentation{Carnegie Mellon University}{2023}{Testing general relativity with strongly lensed gravitational waves 
 }
 \item
-	\presentation{Cardiff University}{September 2022}{Cosmology and modified gravity with binary black holes}
+	\presentation{Cardiff University}{2022}{Cosmology and modified gravity with binary black holes}
 \item
-	\presentation{UC Berkeley}{June 2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+	\presentation{UC Berkeley}{2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
 \item
-	\presentation{University of Wisconsin-Milwaukee}{April 2022}{Cosmology and modified gravity with binary black hole mergers}  
+	\presentation{University of Wisconsin-Milwaukee}{2022}{Cosmology and modified gravity with binary black hole mergers}  
 \item
-	\presentation{Eotvos Lorand University}{September 2019}{Gravitational wave cosmology with large galaxy surveys}     
+	\presentation{Eotvos Lorand University}{2019}{Gravitational wave cosmology with large galaxy surveys}     
 \item
-	\presentation{University of Glasgow}{August 2019}{Measuring the Hubble constant with gravitational-wave standard sirens}
+	\presentation{University of Glasgow}{2019}{Measuring the Hubble constant with gravitational-wave standard sirens}
 \item
-	\presentation{The Chinese University of Hong Kong}{February 2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}	
+	\presentation{The Chinese University of Hong Kong}{2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}	
 \item
-	\presentation{Nagoya University}{February 2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}
+	\presentation{Nagoya University}{2019}{A measurement of the Hubble constant from the second observation run of Advanced LIGO-Virgo}
 \end{enumerate}
 
 \resheading{Talks at Conferences}
 \begin{enumerate}
 \item 
-	\presentation{Gravitational Waves Physics and Astronomy Workshop}{December 2025}{Dark Siren Cosmology with the Dark Energy Spectroscopic Instrument (DESI)
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{2025}{Dark Siren Cosmology with the Dark Energy Spectroscopic Instrument (DESI)
 }
 \item 
-	\presentation{COSMO25}{October 2025}{Gravitational-wave dark siren cosmology with DESI}
+	\presentation{COSMO25}{2025}{Gravitational-wave dark siren cosmology with DESI}
 \item 
-	\presentation{Multimessenger Astronomy in the Era of Foundational AI}{August 2025}{Trends in the GWTC-3 Binary Black Hole Merger Population with UMAP}
+	\presentation{Multimessenger Astronomy in the Era of Foundational AI}{2025}{Trends in the GWTC-3 Binary Black Hole Merger Population with UMAP}
 \item 
-	\presentation{Summer DESI Collaboration Meeting}{July 2025}{Gravitational-wave cosmology with DESI}
+	\presentation{Summer DESI Collaboration Meeting}{2025}{Gravitational-wave cosmology with DESI}
 \item 
-	\presentation{APS Global Physics Summit}{April 2025}{Lucky Strikes: Unraveling the asymmetric origins of GW190814 through binary field evolution}
+	\presentation{APS Global Physics Summit}{2025}{Lucky Strikes: Unraveling the asymmetric origins of GW190814 through binary field evolution}
 \item 
-	\presentation{The 6th neighborhood workshop}{April 2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
+	\presentation{The 6th neighborhood workshop}{2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
 \item 
-	\presentation{Gravitational-wave populations: what’s next?}{July 2023}{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}
+	\presentation{Gravitational-wave populations: what’s next?}{2023}{Non-parametric inference of the population of compact binaries from gravitational wave observations using binned Gaussian processes}
 \item 
-	\presentation{APS April Meeting}{April 2023}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
+	\presentation{APS April Meeting}{2023}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
 \item
-	\presentation{11th Australasian Conference on General Relativity and Gravitation}{February 2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+	\presentation{11th Australasian Conference on General Relativity and Gravitation}{2022}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
 \item
-	\presentation{Midwest Relativity Meeting}{October 2021}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
+	\presentation{Midwest Relativity Meeting}{2021}{Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers}
 \item
-	\presentation{Midwest Relativity Meeting}{October 2020}{On the candidate electromagnetic counterpart of GW190521 and its implications on the Hubble constant}
+	\presentation{Midwest Relativity Meeting}{2020}{On the candidate electromagnetic counterpart of GW190521 and its implications on the Hubble constant}
 \item
-	\presentation{Gravitational Waves Physics and Astronomy Workshop}{October 2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
+	\presentation{Gravitational Waves Physics and Astronomy Workshop}{2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
 \item
-	\presentation{Multi-Messenger Astrophysics in the Gravitational Wave Era}{September 2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
+	\presentation{Multi-Messenger Astrophysics in the Gravitational Wave Era}{2019}{A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo}
 \item
-	\presentation{YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{February 2019}{A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart}
+	\presentation{YITP Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{2019}{A standard siren measurement of the Hubble constant from GW170817 without the electromagnetic counterpart}
 \item
-	\presentation{Midwest Relativity Meeting}{October 2018}{Cosmological inference using gravitational wave standard sirens: A mock data challenge}
+	\presentation{Midwest Relativity Meeting}{2018}{Cosmological inference using gravitational wave standard sirens: A mock data challenge}
 \item
-	\presentation{19th Annual Physical Society of Hong Kong}{June 2016}{Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer}
+	\presentation{19th Annual Physical Society of Hong Kong}{2016}{Feedforward Seismic Noise Cancellation at the 40m Prototype Interferometer}
 
     %\item 11th Australasian Conference on General Relativity and Gravitation, University of Tasmania, Australia, February 2022. Talk: Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers.
 
@@ -382,33 +383,33 @@ Citations according to \href{https://inspirehep.net/}{inspirehep.net} in October
 %\resheading{Posters}
 %\begin{enumerate}
 %\item 
-%	\presentation{APS Global Physics Summit}{April 2025}{A new bump in the night: evidence of a new feature in the binary black hole mass distribution at 70 $M_\odot$ from gravitational-wave observations}
+%	\presentation{APS Global Physics Summit}{2025}{A new bump in the night: evidence of a new feature in the binary black hole mass distribution at 70 $M_\odot$ from gravitational-wave observations}
 %\item
-%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{May 2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
+%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{2024}{Beyond Gaps and Bumps: Spectral Siren Cosmology with Non-Parametric Population Models}
 %\item
-%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{May 2024}{Backpop: Data Driven Population Synthesis inference on Compact Binary Mergers}
+%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{2024}{Backpop: Data Driven Population Synthesis inference on Compact Binary Mergers}
 %\item
-%	\presentation{LVK Meeting: Cardiff University}{September 2022}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
+%	\presentation{LVK Meeting: Cardiff University}{2022}{Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers}
 %\item
-%	\presentation{Merging Visions: Exploring Compact-Object Binaries with Gravity and Light}{June 2019}{Identifying Strong Gravitational-wave Lensing during the Second Observing Run of Advanced LIGO and Advanced Virgo}
+%	\presentation{Merging Visions: Exploring Compact-Object Binaries with Gravity and Light}{2019}{Identifying Strong Gravitational-wave Lensing during the Second Observing Run of Advanced LIGO and Advanced Virgo}
 %\item
-%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{December 2018}{Cosmological inference using gravitational wave standard sirens: A mock data analysis}
+%	\presentation{Gravitational Waves Physics and Astronomy Workshop}{2018}{Cosmological inference using gravitational wave standard sirens: A mock data analysis}
 %\end{enumerate}
 %
 \resheading{Other Workshops}
 \begin{enumerate}
 \item
-	\presentation{Multi-messenger Transients from Binary Mergers and Stellar Explosions}{August 2024}{Aspen Center for Physics}
+	\presentation{Multi-messenger Transients from Binary Mergers and Stellar Explosions}{2024}{Aspen Center for Physics}
 \item
-	\presentation{Black Holes and Neutron Stars with Gravitational Waves}{October 2019}{Yukawa Institute for Theoretical Physics}
+	\presentation{Black Holes and Neutron Stars with Gravitational Waves}{2019}{Yukawa Institute for Theoretical Physics}
 \item
-	\presentation{The New Era of Gravitational-Wave Physics and Astrophysics}{May - July 2019}{Kavli Institute for Theoretical Physics}
+	\presentation{The New Era of Gravitational-Wave Physics and Astrophysics}{2019}{Kavli Institute for Theoretical Physics}
 \item
-	\presentation{Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{February 2019}{Yukawa Institute for Theoretical Physics}
+	\presentation{Asian-Pacific Winter School and Workshop on Gravitation and Cosmology}{2019}{Yukawa Institute for Theoretical Physics}
 \item
-	\presentation{Les Houches Summer School: Gravitational-Wave Astronomy}{July 2018}{Ecole de Physics des Houches}
+	\presentation{Les Houches Summer School: Gravitational-Wave Astronomy}{2018}{Ecole de Physics des Houches}
 \item
-	\presentation{Summer School on Gravitational-Wave Astronomy}{August 2016}{ICTS-TIFR}
+	\presentation{Summer School on Gravitational-Wave Astronomy}{2016}{ICTS-TIFR}
 	
 \end{enumerate}
 
